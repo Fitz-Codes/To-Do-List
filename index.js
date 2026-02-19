@@ -8,13 +8,15 @@ addTaskBtn.addEventListener("click", () => {
     const taskText = document.createElement("p");
     todoWrapper.classList.add("todo-container");
     deleteBtn.classList.add("delete-btn");
-    deleteBtn.textContent = "DELETE";
     taskText.classList.add("task-text");
+    const trashIcon = document.createElement("img");
+    trashIcon.src = "Images/TrshCanSprite.png";
+    trashIcon.alt = "Delete";
     taskText.textContent = task.value;
     todoWrapper.append(taskText);
-    todoWrapper.append(deleteBtn);
+    todoWrapper.append(trashIcon);
     taskContainer.append(todoWrapper);
-    deleteBtn.addEventListener("click", () => {
+    trashIcon.addEventListener("click", () => {
         todoWrapper.remove();
     });
     task.value = "";

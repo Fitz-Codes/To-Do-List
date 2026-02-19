@@ -82,6 +82,7 @@ h1{
 .todo-container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
@@ -95,13 +96,24 @@ h1{
     gap: 10px;
 }
 
-
 .delete-btn{
     background: transparent;
-    border: 0;
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 1em;
-    font-weight: bold;
-    letter-spacing: .2ch;
+    border: none;
     cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.delete-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.task-text {
+    margin: 0;
+    padding: 0;
+    flex: 1;
 }
