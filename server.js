@@ -7,7 +7,6 @@ const PORT = process.env.PORT || 5500;
 
 app.use(express.json());
 app.use(express.static(__dirname));
-app.use("/Images", express.static(path.join(__dirname, "../Images")));
 
 app.get("/api/todos", async (_req, res) => {
   try {
